@@ -7,12 +7,22 @@ import (
 )
 
 func main() {
-	m := [][]float64{
-		{1, 2, 3},
-		{4, 5, 6},
-		{7, 8, 9},
+	m1 := [][]float64{
+		{1.0, 2.0, 0.0, -1.0},
+		{-1.0, 1.0, 2.0, 0.0},
+		{2.0, 0.0, 1.0, 1.0},
+		{1.0, -2.0, -1.0, 1.0},
 	}
-	mt := matrix.Transpose(m)
-	fmt.Println(m)
-	fmt.Println(mt)
+
+	fmt.Println(m1)
+	fmt.Println(matrix.Transpose(m1))
+
+	m2 := [][]float64{
+		{1.0, 1.0, -1.0},
+		{-2.0, 0.0, 1.0},
+		{0.0, 2.0, 1.0},
+	}
+
+	fmt.Println(matrix.Inverse(m1))
+	fmt.Println(matrix.Inverse(m2))
 }
